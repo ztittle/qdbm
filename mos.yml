@@ -1,0 +1,37 @@
+author: Zandt Tittle
+type: lib
+description: QDBM library v.1.8.78 (http://fallabs.com/qdbm/index.html) for use with Mongoose OS.
+version: 1.0
+
+platforms: [ esp32, esp8266 ]
+
+sources:
+  - src/mgos_qdbm.c
+  - src/support
+  - src/depot.c
+  - src/curia.c
+  - src/relic.c
+  - src/hovel.c
+  - src/cabin.c
+  - src/villa.c
+  - src/vista.c
+  - src/odeum.c
+  - src/myconf.c
+
+tags:
+  - c
+  - qdbm
+
+cdefs:
+  MYNOMMAP: 1
+  CS_MMAP: 1
+
+cflags:
+  - "-Wno-type-limits"
+  - "-Wno-implicit-function-declaration"
+  - "-Wno-unused-parameter"
+  - "-Wno-unused-but-set-variable"
+  - "-Wno-sign-compare"
+  - "-Wno-strict-aliasing"
+
+manifest_version: 2017-09-29
