@@ -2,6 +2,11 @@
 
 This library provides support for the embedded database [QDBM](http://fallabs.com/qdbm/index.html) for use on the esp8266 and esp32 platforms with some limitations.
 
+## Language support
+Only the 'C' files are compiled at this time.
+
+## SPIFFS limitations:
+
 The library depends on the `lstat` and `ftruncate` functions, which are not supported on Mongoose OS. The SPIFFS file system does not support symbolic links or truncating files. To provide compatibility, these functions are implemented with the following behavior:
 
 * `lstat` invokes the `stat` function.
@@ -9,9 +14,9 @@ The library depends on the `lstat` and `ftruncate` functions, which are not supp
 
 These functions are implemented under the [support](src/support) folder.
 
-Additionally, locking a file is not supported by SPIFFS, so ensure `DP_ONOLCK` mode is set when opening a databse.
+Additionally, locking a file is not supported by SPIFFS, so ensure `DP_ONOLCK` mode is set when opening a database.
 
-Example:
+## Example
 
 ```
 #include "mgos.h"
