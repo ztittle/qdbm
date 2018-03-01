@@ -5,7 +5,7 @@ This library provides support for the embedded database [QDBM](http://fallabs.co
 ## Language support
 Only the 'C' files are compiled at this time.
 
-## SPIFFS limitations:
+## SPIFFS limitations
 
 The library depends on the `lstat` and `ftruncate` functions, which are not supported on Mongoose OS. The SPIFFS file system does not support symbolic links or truncating files. To provide compatibility, these functions are implemented with the following behavior:
 
