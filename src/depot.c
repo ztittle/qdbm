@@ -28,17 +28,17 @@
 #define DP_FSIZOFF     24                /* offset of the region for the file size */
 #define DP_BNUMOFF     32                /* offset of the region for the bucket number */
 #define DP_RNUMOFF     40                /* offset of the region for the record number */
-#define DP_DEFBNUM     8191              /* default bucket number */
+#define DP_DEFBNUM     4093              /* default bucket number */
 #define DP_FBPOOLSIZ   16                /* size of free block pool */
 #define DP_ENTBUFSIZ   128               /* size of the entity buffer */
 #define DP_STKBUFSIZ   256               /* size of the stack key buffer */
-#define DP_WRTBUFSIZ   8192              /* size of the writing buffer */
+#define DP_WRTBUFSIZ   4096              /* size of the writing buffer */
 #define DP_FSBLKSIZ    4096              /* size of a block of the file system */
 #define DP_TMPFSUF     MYEXTSTR "dptmp"  /* suffix of a temporary file */
 #define DP_OPTBLOAD    0.25              /* ratio of bucket loading at optimization */
 #define DP_OPTRUNIT    256               /* number of records in a process of optimization */
 #define DP_NUMBUFSIZ   32                /* size of a buffer for a number */
-#define DP_IOBUFSIZ    8192              /* size of an I/O buffer */
+#define DP_IOBUFSIZ    4096              /* size of an I/O buffer */
 
 /* get the first hash value */
 #define DP_FIRSTHASH(DP_res, DP_kbuf, DP_ksiz) \
