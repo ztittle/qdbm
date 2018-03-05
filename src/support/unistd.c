@@ -16,3 +16,7 @@ int ftruncate(int fildes, off_t length) {
 
 	return -1;
 }
+
+int fsync(int fd) {
+	return 0;
+}

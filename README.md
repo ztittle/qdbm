@@ -7,10 +7,11 @@ Only the 'C' files are compiled at this time.
 
 ## File System limitations
 
-The library depends on the `lstat` and `ftruncate` functions, which are not implemented on Mongoose OS. There is no support in the virtual file system for symbolic links or truncating files, therefore the following behavior is implemented:
+The library depends on the `lstat`, `ftruncate`, and `fsync` functions, which are not implemented on Mongoose OS. There is no support in the virtual file system for symbolic links or truncating files, therefore the following behavior is implemented:
 
 * `lstat` invokes the `stat` function.
 * `ftruncate` only truncates the file to 0 bytes. Any other length is not supported. All QDBM functions pass 0, so this should work.
+* `fsync` always returns 0.
 
 These functions are implemented under the [support](src/support) folder.
 
