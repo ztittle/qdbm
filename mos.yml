@@ -24,7 +24,6 @@ tags:
 
 cdefs:
   MYNOMMAP: 1
-  CS_MMAP: 1
 
 cflags:
   - "-Wno-type-limits"
